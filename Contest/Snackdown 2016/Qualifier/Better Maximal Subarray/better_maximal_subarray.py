@@ -14,7 +14,7 @@ def betterMaximalSum(a):
         else:
             tempSum += i
         maximum  = max(maximum,i)
-        
+
     if tempSum > 0:
         newArray.append(tempSum)
         length += 1
