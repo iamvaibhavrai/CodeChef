@@ -18,8 +18,6 @@ def betterMaximalSum(a):
         newArray.append(tempSum)
         length += 1
 
-    print(newArray)
-
     if countNegative < len(a):
         mainSum = 0
         alternateSum = 0
