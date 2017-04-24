@@ -1,23 +1,18 @@
 def finishPainting(p,n):
     if n < 3:
         return False
+    count = 1
     prev = p[0]
-    flag1 = 1
-    flag2 = 1
-    for i in range(n):
+    for i in range(1,n):
         curr = p[i]
-        if curr != prev:
-            if n-i < 3:
-                flag1 = 0
-        prev = p[i] if curr != prev else prev
-    for i in range(n-1,-1,-1):
-        curr = p[i]
-        if curr != prev:
-            if i-2 < 0:
-                flag2 = 0
-        prev = p[i] if curr != prev else prev
-    if flag1 or flag2:
-        return True
+        if curr == prev:
+            count += 1
+        else:
+            count = 1
+            prev = curr
+        if count == 3:
+            return True
+
     return False
 
 
